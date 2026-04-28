@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Tailor — Community Stories</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Trip<span>Tailor</span> <span class="logo-dot"></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="community.html" class="active">Community</a></li>
+            <li><a href="profile.html" id="profile-link" style="display:none;">Profile</a></li>
+            <li><button id="theme-toggle" title="Toggle theme">🌓</button></li>
+            <li id="auth-nav"><a href="#" id="login-btn" class="nav-cta">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- COMMUNITY HERO -->
+    <section class="community-hero">
+        <span class="section-label">✦ Community</span>
+        <h1>Travel Stories,<br>Shared Honestly</h1>
+        <p>Real experiences from real travellers — write yours, read theirs.</p>
+    </section>
+
+    <!-- MAIN LAYOUT -->
+    <div class="community-layout">
+
+        <!-- CREATE POST SIDEBAR -->
+        <aside class="create-post" id="post-creation-area">
+            <h2>Share a Story</h2>
+            <form id="blog-form">
+                <input type="text" id="blog-title" placeholder="Trip title..." required>
+                <input type="text" id="blog-location" placeholder="Where did you go?" required>
+                <input type="text" id="blog-image" placeholder="Cover image URL (optional)">
+                <textarea id="blog-content" placeholder="Write your experience — what made it special?" rows="6" required></textarea>
+                <button type="submit" class="cta-btn" style="width:100%;justify-content:center;margin-top:0.5rem;">Publish Story →</button>
+            </form>
+            <div id="login-prompt" style="display:none;">
+                <p>✍️ <strong>Sign in</strong> to share your travel stories with the community.</p>
+                <a href="#" id="login-prompt-btn" class="cta-btn" style="margin-top:1rem;width:100%;justify-content:center;">Sign In to Post</a>
+            </div>
+        </aside>
+
+        <!-- BLOG FEED -->
+        <main class="blog-feed" id="blog-feed">
+            <div class="loading">
+                <div class="spinner"></div>
+                <span>Loading stories...</span>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">Trip<span>Tailor</span></div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </div>
+        <p class="footer-bottom">© 2025 TripTailor. Made with ♥ for Indian travel.</p>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal">✕</button>
+            <div class="modal-logo">Trip<span>Tailor</span></div>
+            <p class="modal-sub">Sign in to save destinations and share stories</p>
+            <h2 id="modal-title">Welcome back</h2>
+            <form id="auth-form" style="margin-top:1.4rem;">
+                <div class="form-field" id="username-field" style="display:none;">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-field">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" id="auth-submit" class="cta-btn" style="width:100%;justify-content:center;margin-top:0.5rem;padding:0.85rem;">Sign In</button>
+            </form>
+            <p class="toggle-auth" id="toggle-auth">Don't have an account? <span>Sign up</span></p>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/community.js"></script>
+</body>
+</html>

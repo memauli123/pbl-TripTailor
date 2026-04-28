@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Tailor — My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Trip<span>Tailor</span> <span class="logo-dot"></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="profile.html" class="active" id="profile-link">Profile</a></li>
+            <li><button id="theme-toggle" title="Toggle theme">🌓</button></li>
+            <li id="auth-nav"><a href="#" id="logout-btn" class="nav-cta">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROFILE HERO -->
+    <section class="profile-hero">
+        <div class="profile-hero-content">
+            <div class="profile-avatar" id="profile-avatar">T</div>
+            <h1 id="profile-username">Traveller</h1>
+            <p id="profile-email">Loading...</p>
+        </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="profile-tabs">
+        <button class="profile-tab active" data-tab="saved">Saved Destinations</button>
+        <button class="profile-tab" data-tab="restaurants">Saved Restaurants</button>
+    </div>
+
+    <!-- PROFILE CONTENT -->
+    <div class="profile-content">
+        <div class="profile-stats">
+            <div class="stat">
+                <div class="stat-num" id="stat-destinations">—</div>
+                <div class="stat-label">Saved Places</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" id="stat-restaurants">—</div>
+                <div class="stat-label">Restaurants</div>
+            </div>
+        </div>
+
+        <!-- SAVED DESTINATIONS TAB -->
+        <div id="tab-saved">
+            <div class="masonry-grid" id="saved-items-container">
+                <div class="loading" style="column-span:all;">
+                    <div class="spinner"></div>
+                    <span>Loading your saved places...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SAVED RESTAURANTS TAB -->
+        <div id="tab-restaurants" style="display:none;">
+            <div class="masonry-grid" id="saved-restaurants-container">
+                <div class="loading" style="column-span:all;">
+                    <div class="spinner"></div>
+                    <span>Loading your saved restaurants...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">Trip<span>Tailor</span></div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </div>
+        <p class="footer-bottom">© 2025 TripTailor. Made with ♥ for Indian travel.</p>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

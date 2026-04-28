@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Restaurant = require('../models/Restaurant');
 const Monument = require('../models/Monument');
-const User = require('../models/User');
+const User = require('../models/user');
 const auth = require('../middleware/authMiddleware');
 
 router.get('/', async (req, res) => {

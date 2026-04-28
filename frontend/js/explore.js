@@ -1,6 +1,6 @@
 // explore.js
 
-const API_URL = 'http://localhost:5000/api/explore';
+const API_URL = 'https://pbl-triptailor.onrender.com/api/explore';
 const FALLBACK_IMG = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80';
 
 let currentQuery    = '';
